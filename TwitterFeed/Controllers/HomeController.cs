@@ -58,7 +58,7 @@ namespace TwitterFeed.Controllers
         {
             return PartialView("~/Views/Home/Tweets.cshtml", Tweets);
         }
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult> RefreshTweets()
         {
             Tweets = await GetTweetsByOauth();

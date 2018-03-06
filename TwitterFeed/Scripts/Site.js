@@ -7,7 +7,7 @@
     });
     $(document).on('click', "#unfilter", function () {
         $.ajax({
-            url: '/Home/UnfilterTweets',
+            url: rootUrl + 'Home/UnfilterTweets',
             type: 'POST',
             dataType: 'text',
             failure: function(xhr, status, error){
@@ -24,8 +24,8 @@
 });
 function refreshTweets() {
     $.ajax({
-        url: '/Home/RefreshTweets',
-        type: 'GET',
+        url: rootUrl + 'Home/RefreshTweets',
+        type: 'POST',
         dataType: 'text',
         failure: function (xhr, status, error) {
             alert('Unable to refresh tweets at this time');
@@ -38,7 +38,7 @@ function refreshTweets() {
 };
 function filterTweets(text) {
     $.ajax({
-        url: '/Home/FilterTweetsOnPage',
+        url: rootUrl + 'Home/FilterTweetsOnPage',
         contentType: 'application/json;charset=UTF-8',
         type: 'POST',
         data: JSON.stringify({ 'search': text }),
