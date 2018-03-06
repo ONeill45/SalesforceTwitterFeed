@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TwitterFeed.Models.Tweet>
+<div class="container-fluid" style="overflow:auto">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input id="searchBar" class="form-control" type="text" placeholder="Search" />
+                    <div class="input-group-append">
+                        <button id="filterTweets" class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
+                </div>
+                <a id="unfilter" href="#" hidden>Clear Filter</a>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <div class="row" id="tweets">
+                @Html.Partial("~/Views/Home/Tweets.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>

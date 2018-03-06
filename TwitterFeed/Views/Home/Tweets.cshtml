@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TwitterFeed.Models.Tweet>
+<div class="container-fluid" style="overflow:auto">
+    @foreach (var tweet in Model)
+    {
+        <div class="mt-2">
+            @Html.Partial("~/Views/Home/Tweet.cshtml", tweet)
+        </div>
+    }
+</div>

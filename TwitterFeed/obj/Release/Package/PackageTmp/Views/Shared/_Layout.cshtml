@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/Site.js")
+    @Scripts.Render("~/Scripts/bootstrap.bundle.js")
+</head>
+<body>
+    <nav class="navbar navbar-dark" style="background-color:#0084b4">
+        <a class="navbar-brand" href="/Home/Index">Twitter Feed</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle dropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+            
+        </div>
+    </nav>
+    <div class="container-fluid">
+        @RenderBody()
+        <hr />
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
